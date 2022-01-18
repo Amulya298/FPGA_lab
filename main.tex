@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{karnaugh-map}
+\usepackage{tikz}
+\usetikzlibrary{shapes.gates.logic.US}
+\usetikzlibrary{circuits.ee.IEC}
+
+\title{EE5811 FPGA-A1}
+\author{Pendota Amulya \\ \\EE21MTECH12003 }
+\date{January 2022}
+
+\begin{document}
+\maketitle
+\section{Question}
+2017 Q.6(a) State DeMorgan's Laws of Boolean Algebra and verify them using truth table.
+\section{Solution}
+\subsection{DeMorgan's Laws}
+\\$1)\; (A+B)'=A'.B'$\\
+\\$2)\;(AB)'=A'+B'$
+\subsection{Verification using truth tables}
+Law 1: 
+    \begin{table} [h]
+    \centering
+    \begin{tabular}{ | c | c | c | c | c | c | c | }
+    \hline
+    A & B & A' & B'& A+B & (A+B)' & A'.B' \\ [0.5ex]
+     \hline
+    0 & 0 & 1 & 1 & 0 & 1 & 1\\
+    0 & 1 & 1 & 0 & 1 & 0 & 0\\
+    1 & 0 & 0 & 1 & 1 & 0 & 0\\
+    1 & 1 & 0 & 0 & 1 & 0 & 0\\ [1ex]
+    \hline
+    \end{tabular}
+    \end{table}
+\\
+Law 2:
+    \begin{table} [h]
+    \centering
+    \begin{tabular}{ | c | c | c | c | c | c | c | }
+    \hline
+    A & B & A' & B'& A.B & (A.B)' & A'+B' \\ [0.5ex]
+     \hline
+    0 & 0 & 1 & 1 & 0 & 1 & 1\\
+    0 & 1 & 1 & 0 & 0 & 1 & 1\\
+    1 & 0 & 0 & 1 & 0 & 1 & 1\\
+    1 & 1 & 0 & 0 & 1 & 0 & 0\\ [1ex]
+    \hline
+    \end{tabular}
+    \end{table}
+\end{document}
