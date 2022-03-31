@@ -50,7 +50,7 @@ Start:
         ldi r20,0b00000010
 	rcall loopl
 
-        ldi r16, 0b0010000 ;identifying output pins 2,3,4,5
+        ldi r16, 0b0100000 ;identifying output pin 13 of arduino
         out DDRD,r16                ;declaring pins as output
         out PORTD,r25                ;
 
