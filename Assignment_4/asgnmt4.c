@@ -15,6 +15,8 @@ int main (void)
             
      a= i & 0b00000100;
      b= i & 0b00001000;
+   
+   
       y1=!(a||b);
       y2=(!a)&&(!b);
       y3=!(a&&b);
@@ -22,9 +24,9 @@ int main (void)
      
 
 if(y1==y2)
-PORTB = ((0 <<  PB5)); ##led off when condition is correct
+PORTB = ((0 <<  PB5)); 
 else
-PORTB = ((1 <<  PB5));##led on when condition is wrong
+PORTB = ((1 <<  PB5));
 
   }
 
